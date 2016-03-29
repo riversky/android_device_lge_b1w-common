@@ -12,49 +12,49 @@ include $(BUILD_PREBUILT)
 # Init scripts
 
 include $(CLEAR_VARS)
-LOCAL_MODULE            := fstab.g2
+LOCAL_MODULE            := fstab.b1w
 LOCAL_MODULE_TAGS       := optional eng
 LOCAL_MODULE_CLASS      := ETC
-LOCAL_SRC_FILES         := etc/fstab.g2
+LOCAL_SRC_FILES         := etc/fstab.b1w
 LOCAL_MODULE_PATH       := $(TARGET_ROOT_OUT)
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE            := init.g2.rc
+LOCAL_MODULE            := init.b1w.rc
 LOCAL_MODULE_TAGS       := optional eng
 LOCAL_MODULE_CLASS      := ETC
-LOCAL_SRC_FILES         := etc/init.g2.rc
+LOCAL_SRC_FILES         := etc/init.b1w.rc
 LOCAL_MODULE_PATH       := $(TARGET_ROOT_OUT)
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE            := init.g2.power.rc
+LOCAL_MODULE            := init.b1w.power.rc
 LOCAL_MODULE_TAGS       := optional eng
 LOCAL_MODULE_CLASS      := ETC
-LOCAL_SRC_FILES         := etc/init.g2.power.rc
+LOCAL_SRC_FILES         := etc/init.b1w.power.rc
 LOCAL_MODULE_PATH       := $(TARGET_ROOT_OUT)
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE            := init.g2.usb.rc
+LOCAL_MODULE            := init.b1w.usb.rc
 LOCAL_MODULE_TAGS       := optional eng
 LOCAL_MODULE_CLASS      := ETC
-LOCAL_SRC_FILES         := etc/init.g2.usb.rc
+LOCAL_SRC_FILES         := etc/init.b1w.usb.rc
 LOCAL_MODULE_PATH       := $(TARGET_ROOT_OUT)
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE            := init.recovery.g2.rc
+LOCAL_MODULE            := init.recovery.b1w.rc
 LOCAL_MODULE_TAGS       := optional eng
 LOCAL_MODULE_CLASS      := ETC
-LOCAL_SRC_FILES         := etc/init.g2.power.rc
+LOCAL_SRC_FILES         := etc/init.b1w.power.rc
 LOCAL_MODULE_PATH       := $(TARGET_RECOVERY_ROOT_OUT)
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE            := ueventd.g2.rc
+LOCAL_MODULE            := ueventd.b1w.rc
 LOCAL_MODULE_TAGS       := optional eng
 LOCAL_MODULE_CLASS      := ETC
-LOCAL_SRC_FILES         := etc/ueventd.g2.rc
+LOCAL_SRC_FILES         := etc/ueventd.b1w.rc
 LOCAL_MODULE_PATH       := $(TARGET_ROOT_OUT)
 include $(BUILD_PREBUILT)
