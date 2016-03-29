@@ -25,8 +25,8 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-import init.g2.power.rc
-import init.g2.usb.rc
+import init.b1w.power.rc
+import init.b1w.usb.rc
 
 on early-init
     symlink /dev/diag_lge /dev/diag
@@ -55,7 +55,7 @@ on init
     symlink /sdcard /storage/sdcard0
 
 on fs
-    mount_all ./fstab.g2
+    mount_all ./fstab.b1w
     restorecon_recursive /persist
     restorecon_recursive /persist-lg
     restorecon_recursive /sns
