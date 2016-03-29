@@ -120,13 +120,13 @@ PRODUCT_COPY_FILES += \
 
 # Init
 PRODUCT_PACKAGES += \
-    fstab.g2 \
-    init.g2.rc \
-    init.g2.power.rc \
-    init.g2.usb.rc \
-    init.recovery.g2.rc \
+    fstab.b1w \
+    init.b1w.rc \
+    init.b1w.power.rc \
+    init.b1w.usb.rc \
+    init.recovery.b1w.rc \
     set_baseband.sh \
-    ueventd.g2.rc
+    ueventd.b1w.rc
 
 # IPv6 tethering
 PRODUCT_PACKAGES += \
