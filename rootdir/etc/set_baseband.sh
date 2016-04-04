@@ -6,7 +6,7 @@ case "$product" in
         "ls980" | "vs980")
         setprop gsm.version.baseband `strings /firmware/image/modem.b18 | grep "^MPSS.DI" | head -1`
         ;;
-        "d838" | "f350" | "f350k" | "f350l")
+        "d838" | "d837" | "f350" | "b1w" | "f3350k" | "f350s")
         setprop gsm.version.baseband `strings /firmware/image/modem.b21 | grep "^M8974A-" | head -1`
         ;;
 esac

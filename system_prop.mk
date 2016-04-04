@@ -31,25 +31,25 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     drm.service.enabled=true
 
-# GPS
+# IO Scheduler
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.gps.qc_nlp_in_use=0 \
-    ro.gps.agps_provider=1
+    sys.io.scheduler=bfq
 
 # Media/offload
-# TODO: Re-enable when it works
-PRODUCT_PROPERTY_OVERRIDES += \
-    audio.offload.disable=true
-
 PRODUCT_PROPERTY_OVERRIDES += \
     audio.offload.buffer.size.kb=32 \
     audio.offload.gapless.enabled=true \
+    audio.offload.multiple.enabled=false \
     audio.offload.pcm.16bit.enable=true \
     audio.offload.pcm.24bit.enable=true \
-    av.streaming.offload.enable=true
+    av.offload.enable=true \
+    av.streaming.offload.enable=true \
+    tunnel.audio.encode=true
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    media.aac_51_output_enabled=true
+    media.aac_51_output_enabled=true \
+    mm.enable.smoothstreaming=true \
+    mm.enable.qcom_parser=3310129
 
 # NFC
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -73,11 +73,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.call_ring.multiple=0
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.data.qmi.adb_logmask=0 \
-
-PRODUCT_PROPERTY_OVERRIDES += \
     rild.libpath=/vendor/lib/libril-qc-qmi-1.so \
-    ro.ril.telephony.mqanelements=5
+    ro.telephony.ril_class=LgeLteRIL
 
 # Sensors
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -116,6 +113,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.qualcomm.sns.libsensor1=e \
     persist.debug.sensors.hal=e \
     persist.debug.ar.hal=e
+
+# USB
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    persist.sys.usb.config=mtp \
+    persist.sys.isUsbOtgEnabled=true
 
 # Wifi
 PRODUCT_PROPERTY_OVERRIDES += \

@@ -24,7 +24,9 @@ TARGET_BOARD_PLATFORM_GPU := qcom-adreno330
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_VARIANT := krait
-USE_CLANG_PLATFORM_BUILD := true
+
+# Assertions
+TARGET_BOARD_INFO_FILE ?= device/lge/b1w-common/board-info.txt
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := galbi
@@ -38,13 +40,12 @@ BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 user_debug=31 ehci-hcd.park=3 msm_rtb.filter=0x0 androidboot.hardware=b1w
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_SEPARATED_DT := true
-BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000 --tags_offset 0x00000100
+BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000 --tags_offset 00000100
 TARGET_KERNEL_SOURCE := kernel/lge/msm8974
 
 # Audio
-AUDIO_FEATURE_ENABLED_NEW_SAMPLE_RATE := true
-BOARD_USES_ALSA_AUDIO := true
-USE_CUSTOM_AUDIO_POLICY := 1
+AUDIO_FEATURE_LOW_LATENCY_PRIMARY := true
+BOARD_USES_ALSA_AUDIO:= true
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/lge/b1w-common/bluetooth
@@ -53,8 +54,7 @@ BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
 
 # Camera
-COMMON_GLOBAL_CFLAGS += -DCAMERA_VENDOR_L_COMPAT
-TARGET_USE_COMPAT_GRALLOC_ALIGN := true
+COMMON_GLOBAL_CFLAGS += -DLG_CAMERA_HARDWARE
 USE_DEVICE_SPECIFIC_CAMERA := true
 
 # Charger
@@ -65,7 +65,6 @@ COMMON_GLOBAL_CFLAGS += \
 
 # CMHW
 BOARD_HARDWARE_CLASS := device/lge/b1w-common/cmhw/
-TARGET_TAP_TO_WAKE_NODE := "/sys/devices/virtual/input/lge_touch/touch_gesture"
 
 # Display
 HAVE_ADRENO_SOURCE := false
@@ -78,9 +77,6 @@ USE_OPENGL_RENDERER := true
 
 # Fonts
 EXTENDED_FONT_FOOTPRINT := true
-
-# Init
-TARGET_INIT_VENDOR_LIB := libinit_msm
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
@@ -112,7 +108,8 @@ TARGET_USERIMAGES_USE_F2FS := true
 TARGET_RELEASETOOLS_EXTENSIONS := device/lge/b1w-common/releasetools
 
 # RIL
-BOARD_RIL_CLASS += ../../../device/lge/b1w-common/ril
+BOARD_RIL_CLASS := ../../../device/lge/b1w-common/ril/
+TARGET_RELEASE_CPPFLAGS += -DNEEDS_LGE_RIL_SYMBOLS
 
 # SELinux policies
 include device/qcom/sepolicy/sepolicy.mk

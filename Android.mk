@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-ifneq ($(filter b1w d838 f350 d837 f350k f350l,$(TARGET_DEVICE)),)
+ifneq ($(filter b1w d838 d837 f350 f350x f350k f350s,$(TARGET_DEVICE)),)
 
 LOCAL_PATH := $(call my-dir)
 
@@ -26,6 +26,18 @@ define vfatfilename
 $(foreach f,$(1),$(shell echo $(f) | \
     awk 'BEGIN { FS="."; } { printf("%s.%s", substr($$1,1,8), $$2); }'))
 endef
+
+DXHDCP2_IMAGES := \
+    dxhdcp2.b00 dxhdcp2.b01 dxhdcp2.b02 dxhdcp2.b03 dxhdcp2.mdt
+
+DXHDCP2_SYMLINKS := $(addprefix $(TARGET_OUT_ETC)/firmware/,$(DXHDCP2_IMAGES))
+$(DXHDCP2_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
+	@echo "dxhdcp2 firmware link: $@"
+	@mkdir -p $(dir $@)
+	@rm -rf $@
+	$(hide) ln -sf /firmware/image/$(call vfatfilename,$(notdir $@)) $@
+
+ALL_DEFAULT_INSTALLED_MODULES += $(DXHDCP2_SYMLINKS)
 
 TQS_IMAGES := \
     tqs.b00 tqs.b01 tqs.b02 tqs.b03 tqs.mdt
