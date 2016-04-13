@@ -171,17 +171,32 @@ on boot
     chmod 0644 /proc/cmdline
 
     # bluetooth
+    chown bluetooth bluetooth /sys/module/bluetooth_power/parameters/power
     chown bluetooth net_bt_stack /sys/class/rfkill/rfkill0/type
     chown bluetooth net_bt_stack /sys/class/rfkill/rfkill0/state
     chown bluetooth net_bt_stack /proc/bluetooth/sleep/btwake
     chown bluetooth net_bt_stack /proc/bluetooth/sleep/proto
+    chown bluetooth net_bt_stack /proc/bluetooth/sleep/lpm
     chown bluetooth bluetooth /proc/bluetooth/sleep/btwrite
-    chown bluetooth bluetooth /proc/bluetooth/sleep/lpm
+    chown bluetooth bluetooth /sys/module/hci_uart/parameters/ath_lpm
+    chown bluetooth bluetooth /sys/module/hci_uart/parameters/ath_btwrite
+    chown system system /sys/module/sco/parameters/disable_esco
+    chown bluetooth bluetooth /sys/module/hci_smd/parameters/hcismd_set
+    chown system system /sys/module/radio_iris_transport/parameters/fmsmd_set
+    chmod 0660 /sys/module/bluetooth_power/parameters/power
+    chmod 0660 /sys/module/hci_smd/parameters/hcismd_set
+    chmod 0660 /sys/module/radio_iris_transport/parameters/fmsmd_set
     chmod 0660 /sys/class/rfkill/rfkill0/state
     chmod 0660 /proc/bluetooth/sleep/btwake
     chmod 0660 /proc/bluetooth/sleep/proto
     chmod 0644 /proc/bluetooth/sleep/btwrite
     chmod 0644 /proc/bluetooth/sleep/lpm
+    chown bluetooth net_bt_stack /dev/ttyHS99
+    chmod 0660 /sys/module/hci_uart/parameters/ath_lpm
+    chmod 0660 /sys/module/hci_uart/parameters/ath_btwrite
+    chmod 0660 /dev/ttyHS99
+    chown bluetooth bluetooth /sys/devices/platform/msm_serial_hs.0/clock
+    chmod 0660 /sys/devices/platform/msm_serial_hs.0/clock
 
     # vibrator
     chown system system /sys/class/timed_output/vibrator/amp
@@ -332,6 +347,12 @@ service conn_init /system/bin/hwaddrs
     user system
     group system wifi
     oneshot
+
+service btinit-sh /system/bin/sh /init.qcom.bt.sh
+    class core
+    user root
+    oneshot
+    disabled
 
 on property:init.svc.conn_init=stopped
     chmod 644 /data/misc/bdaddr
