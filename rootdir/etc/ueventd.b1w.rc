@@ -195,8 +195,7 @@
 /dev/nfc-nci              0660    nfc         nfc
 
 # NFC
-/dev/bcm2079x             0660  nfc        nfc
-/dev/pn544                0660  nfc        nfc
+/dev/pn547                0660   nfc        nfc
 
 # UIO devices
 /dev/uio0                 0660   system     system

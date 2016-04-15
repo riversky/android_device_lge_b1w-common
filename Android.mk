@@ -14,8 +14,7 @@
 # limitations under the License.
 #
 
-ifneq ($(filter b1w d838 f350 d837 f350k f350l,$(TARGET_DEVICE)),)
-
+ifneq ($(filter b1w d838 f350 d837 f350k f350l f350s,$(TARGET_DEVICE)),)
 LOCAL_PATH := $(call my-dir)
 
 include $(call all-makefiles-under,$(LOCAL_PATH))

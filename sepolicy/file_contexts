@@ -18,7 +18,7 @@
 /dev/socket/mpdecision(/.*)?                        u:object_r:mpctl_socket:s0
 
 # NFC
-/dev/bcm2079x                                       u:object_r:nfc_device:s0
+/dev/pn547                                          u:object_r:nfc_device:s0
 
 # Persist
 /persist-lg(/.*)?                                   u:object_r:persist_drm_file:s0

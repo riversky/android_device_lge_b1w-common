@@ -65,7 +65,7 @@ COMMON_GLOBAL_CFLAGS += \
 
 # CMHW
 BOARD_HARDWARE_CLASS := device/lge/b1w-common/cmhw/
-TARGET_TAP_TO_WAKE_NODE := "/sys/devices/virtual/input/lge_touch/touch_gesture"
+TARGET_TAP_TO_WAKE_NODE := "/sys/devices/virtual/input/lge_touch/lpwg_notify"
 
 # Display
 HAVE_ADRENO_SOURCE := false
@@ -130,3 +130,7 @@ BOARD_WLAN_DEVICE           := bcmdhd
 WIFI_DRIVER_FW_PATH_PARAM   := "/sys/module/bcmdhd/parameters/firmware_path"
 WIFI_DRIVER_FW_PATH_STA     := "/system/etc/firmware/fw_bcmdhd.bin"
 WIFI_DRIVER_FW_PATH_AP      := "/system/etc/firmware/fw_bcmdhd_apsta.bin"
+
+# NFC
+BOARD_NFC_CHIPSET := pn547
+
