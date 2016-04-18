@@ -40,3 +40,4 @@
 # Vibrator
 /sys/devices/virtual/input/lge_touch(/.*)?          u:object_r:sysfs_touchpanel:s0
 /sys/devices/platform/tspdrv/nforce_timed           u:object_r:sysfs_vibeamp:s0
+/sys/devices/virtual/input/lge_touch/keyguard       u:object_r:sysfs_touch_keyguard:s0
