@@ -324,27 +324,7 @@ on boot
     # Tap to wake
     chown system radio /sys/devices/virtual/input/lge_touch/touch_gesture
     chmod 0664 /sys/devices/virtual/input/lge_touch/touch_gesture
-
-    # Touch_Knock_on
-    chown system system /sys/devices/virtual/input/lge_touch/lpwg_data
-    chmod 664 /sys/devices/virtual/input/lge_touch/lpwg_data
-    chown system radio /sys/devices/virtual/input/lge_touch/lpwg_notify
-    chmod 664 /sys/devices/virtual/input/lge_touch/lpwg_notify
-    write /sys/devices/virtual/input/lge_touch/lpwg_notify "1 1 0 0"
-    chown system system /sys/devices/virtual/input/lge_touch/lpwg_test_info
-    chmod 644 /sys/devices/virtual/input/lge_touch/lpwg_test_info
-    chown system system /sys/devices/virtual/input/lge_touch/lpwg_test_ctrl
-    chmod 644 /sys/devices/virtual/input/lge_touch/lpwg_test_ctrl
-    chown system system /sys/devices/virtual/input/lge_touch/touch_wake_up_test
-    chmod 664 /sys/devices/virtual/input/lge_touch/touch_wake_up_test
-    chown system lgkeyguard /sys/devices/virtual/input/lge_touch/keyguard
-    chmod 664 /sys/devices/virtual/input/lge_touch/keyguard    	
-    chown system system /sys/devices/virtual/input/lge_touch/mfts
-    chmod 640 /sys/devices/virtual/input/lge_touch/mfts
-    chown system system /sys/devices/virtual/input/lge_touch/mfts_fw
-    chmod 640 /sys/devices/virtual/input/lge_touch/mfts_fw
-    chown system system /sys/devices/virtual/input/lge_touch/mfts_fw_ver
-    chmod 640 /sys/devices/virtual/input/lge_touch/mfts_fw_ver 
+    write /sys/devices/virtual/input/lge_touch/touch_gesture 1
 
 on charger
     wait /dev/block/platform/msm_sdcc.1/by-name/modem
