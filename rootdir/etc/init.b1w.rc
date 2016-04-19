@@ -324,7 +324,7 @@ on boot
     # START touch_driver
     chown system system /sys/devices/virtual/input/lge_touch/lpwg_data
     chmod 664 /sys/devices/virtual/input/lge_touch/lpwg_data
-    chown system system /sys/devices/virtual/input/lge_touch/lpwg_notify
+    chown system radio /sys/devices/virtual/input/lge_touch/lpwg_notify
     chmod 664 /sys/devices/virtual/input/lge_touch/lpwg_notify
     chown system lgkeyguard /sys/devices/virtual/input/lge_touch/keyguard
     chmod 664 /sys/devices/virtual/input/lge_touch/keyguard
@@ -356,12 +356,6 @@ on boot
     chown system system /sys/devices/f9924000.i2c/i2c-2/2-004a/mem_access
     chmod 664 /sys/devices/virtual/input/lge_touch/use_quick_window
     chown system system /sys/devices/virtual/input/lge_touch/use_quick_window
-
-    write /sys/devices/virtual/input/lge_touch/touch_gesture 1
-
-    chown system system /sys/devices/virtual/input/lge_touch/tap_to_wake
-    chmod 664 /sys/devices/virtual/input/lge_touch/tap_to_wake
-    write /sys/devices/virtual/input/lge_touch/tap_to_wake 1
     # END touch_driver
 
 on charger
