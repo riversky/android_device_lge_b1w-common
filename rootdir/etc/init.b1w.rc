@@ -321,12 +321,45 @@ on boot
     chown root system /sys/devices/platform/tspdrv/nforce_timed
     chmod 0664 /sys/devices/platform/tspdrv/nforce_timed
 
+    # Begin keyguard file for ghost finger(jasper.kim@lge.com)
+    chown system system /sys/devices/virtual/input/lge_touch/lpwg_data
+    chmod 664 /sys/devices/virtual/input/lge_touch/lpwg_data
+
     # Tap to wake
     chown system radio /sys/devices/virtual/input/lge_touch/lpwg_notify
     chmod 0664 /sys/devices/virtual/input/lge_touch/lpwg_notify
-    chown system radio /sys/devices/virtual/input/lge_touch/tap2wake
-    chmod 0664 /sys/devices/virtual/input/lge_touch/tap2wake
-  
+
+    chown system lgkeyguard /sys/devices/virtual/input/lge_touch/keyguard
+    chmod 664 /sys/devices/virtual/input/lge_touch/keyguard
+    chown system system /sys/devices/virtual/input/lge_touch/incoming_call
+    chmod 664 /sys/devices/virtual/input/lge_touch/touch_gesture
+    chown system system /sys/devices/virtual/input/lge_touch/touch_gesture
+    chown system system /sys/devices/virtual/input/lge_touch/ime_status
+    chown system system /sys/devices/virtual/input/lge_touch/mfts
+    chmod 640 /sys/devices/virtual/input/lge_touch/mfts
+    chown system system /sys/devices/virtual/input/lge_touch/mfts_fw
+    chmod 640 /sys/devices/virtual/input/lge_touch/mfts_fw
+    chown system system /sys/devices/virtual/input/lge_touch/mfts_fw_ver
+    chmod 640 /sys/devices/virtual/input/lge_touch/mfts_fw_ver
+    # End keyguard file for ghost finger
+
+    # LGE_CHANGE_S, 2014-11-21, jaeku.yu@lge.com, For B1(Atmel) Touch feature
+    chmod 664 /sys/devices/virtual/input/lge_touch/touch_gesture_character
+    chown system system /sys/devices/virtual/input/lge_touch/touch_gesture_character
+    chmod 664 /sys/devices/virtual/input/lge_touch/touch_gesture_volume
+    chown system system /sys/devices/virtual/input/lge_touch/touch_gesture_volume
+    chmod 664 /sys/devices/virtual/input/lge_touch/quick_cover_status
+    chown system system /sys/devices/virtual/input/lge_touch/quick_cover_status
+    chmod 664 /sys/devices/virtual/input/lge_touch/update_fw
+    chown system system /sys/devices/virtual/input/lge_touch/update_fw
+    chmod 664 /sys/devices/virtual/input/lge_touch/update_cfg
+    chown system system /sys/devices/virtual/input/lge_touch/update_cfg
+    chmod 664 /sys/devices/f9924000.i2c/i2c-2/2-004a/mem_access
+    chown system system /sys/devices/f9924000.i2c/i2c-2/2-004a/mem_access
+    chmod 664 /sys/devices/virtual/input/lge_touch/use_quick_window
+    chown system system /sys/devices/virtual/input/lge_touch/use_quick_window
+    # LGE_CHANGE_E, 2014-11-21, jaeku.yu@lge.com, For B1(Atmel) Touch feature
+ 
 on charger
     wait /dev/block/platform/msm_sdcc.1/by-name/modem
     mount vfat /dev/block/platform/msm_sdcc.1/by-name/modem /firmware ro shortname=lower,uid=1000,gid=1000,dmask=227,fmask=337
