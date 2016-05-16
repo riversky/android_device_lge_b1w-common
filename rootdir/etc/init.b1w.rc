@@ -362,6 +362,12 @@ on boot
     chown system system /sys/devices/virtual/input/lge_touch/use_quick_window
     # LGE_CHANGE_E, 2014-11-21, jaeku.yu@lge.com, For B1(Atmel) Touch feature
  
+    # SubSystem Restart
+    write /sys/bus/msm_subsys/devices/subsys0/restart_level "related"
+    write /sys/bus/msm_subsys/devices/subsys1/restart_level "related"
+    write /sys/bus/msm_subsys/devices/subsys2/restart_level "related"
+    write /sys/bus/msm_subsys/devices/subsys3/restart_level "related"
+
 on charger
     wait /dev/block/platform/msm_sdcc.1/by-name/modem
     mount vfat /dev/block/platform/msm_sdcc.1/by-name/modem /firmware ro shortname=lower,uid=1000,gid=1000,dmask=227,fmask=337
