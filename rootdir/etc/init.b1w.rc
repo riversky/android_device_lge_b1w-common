@@ -219,6 +219,17 @@ on boot
     chmod 0660 /sys/class/leds/button-backlight1/brightness
     chmod 0660 /sys/class/leds/button-backlight2/brightness
 
+    # emotional led
+    chown system system /sys/devices/virtual/lg_rgb_led/use_patterns/blink_patterns
+    chmod 0644 /sys/devices/virtual/lg_rgb_led/use_patterns/blink_patterns
+    chown system system /sys/devices/virtual/lg_rgb_led/use_patterns/input_patterns
+    chmod 0644 /sys/devices/virtual/lg_rgb_led/use_patterns/input_patterns
+    chown system system /sys/devices/virtual/lg_rgb_led/use_patterns/onoff_patterns
+    chmod 0644 /sys/devices/virtual/lg_rgb_led/use_patterns/onoff_patterns
+    chown system system /sys/devices/virtual/lg_rgb_led/use_patterns/setting
+    chmod 0644 /sys/devices/virtual/lg_rgb_led/use_patterns/setting
+    write /sys/devices/virtual/lg_rgb_led/use_patterns/setting 0
+
     # lp5521
     chown system system /sys/devices/f9967000.i2c/i2c-0/0-0032/led_current_index
     chown system system /sys/devices/f9967000.i2c/i2c-0/0-0032/led_pattern
