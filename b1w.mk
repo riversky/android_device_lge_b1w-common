@@ -105,6 +105,10 @@ PRODUCT_PACKAGES += \
     hwcomposer.msm8974 \
     memtrack.msm8974
 
+# QuickCircle Case App
+PRODUCT_PACKAGES += \
+    QuickCircle
+
 # Gello
 PRODUCT_PACKAGES += \
     Gello
