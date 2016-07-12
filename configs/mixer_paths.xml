@@ -1023,7 +1023,7 @@
     <path name="voice-rec-mic">
         <path name="handset-mic" />
         <ctl name="ADC1 Volume" value="14" />
-        <ctl name="DEC6 Volume" value="66" />
+        <ctl name="DEC6 Volume" value="73" />
     </path>
 
     <path name="camcorder-mic">
@@ -1035,9 +1035,9 @@
         <ctl name="DEC6 MUX" value="ADC1" />
         <ctl name="SLIM_0_TX Channels" value="Two" />
         <ctl name="ADC1 Volume" value="12" />
-        <ctl name="DEC6 Volume" value="66" />
+        <ctl name="DEC6 Volume" value="73" />
         <ctl name="ADC3 Volume" value="12" />
-        <ctl name="DEC4 Volume" value="66" />
+        <ctl name="DEC4 Volume" value="73" />
     </path>
 
     <path name="hdmi-tx">
@@ -1203,7 +1203,7 @@
     <path name="headset-camcorder-mic">
         <path name="headset-mic" />
         <ctl name="ADC2 Volume" value="12" />
-        <ctl name="DEC5 Volume" value="66" />
+        <ctl name="DEC5 Volume" value="73" />
     </path>
 
     <path name="dmic-endfire">
