@@ -29,4 +29,7 @@
     <!-- Proximity check on screen on default -->
     <bool name="config_proximityCheckOnWakeEnabledByDefault">true</bool>
 
+    <!-- overlay: Ignore first proximity event when waking up -->
+    <bool name="config_proximityCheckIgnoreFirstProximityEvent">true</bool>
+
 </resources>
