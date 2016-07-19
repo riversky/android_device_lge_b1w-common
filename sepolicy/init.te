@@ -1,0 +1,9 @@
+# fix some selinux denials related to supersu
+allow init system_file:file execute_no_trans;
+allow zygote init:unix_stream_socket { read write };
+
+# allow supolicy to read and load sepolicy
+allow init kernel:security load_policy;
+allow init kernel:security read_policy;
+
+# neverallow init { file_type fs_type }:file execute_no_trans;
