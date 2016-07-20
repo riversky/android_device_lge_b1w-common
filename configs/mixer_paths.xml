@@ -1468,6 +1468,18 @@
         <ctl name="DEC4 Volume" value="67" />
     </path>
 
+    <path name="line">
+          <path name="headphones" />
+    </path>
+
+    <path name="voice-line">
+          <path name="voice-headphones" />
+    </path>
+
+    <path name="speaker-and-line">
+          <path name="speaker-and-headphones" />
+    </path>
+
     <!-- 2013-10-24, jongyeol.yang,  voip loopback -->
 
     <path name="bt-sco-and-speaker">
@@ -1484,18 +1496,6 @@
     </path>
 
     <path name="bt-sco-mic-nrec">
-    </path>
-
-    <path name="line">
-          <path name="headphones" />
-    </path>
-
-    <path name="voice-line">
-          <path name="voice-headphones" />
-    </path>
-
-    <path name="speaker-and-line">
-          <path name="speaker-and-headphones" />
     </path>
 
 </mixer>
