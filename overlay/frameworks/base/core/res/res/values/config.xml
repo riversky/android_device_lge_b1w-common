@@ -91,7 +91,7 @@
         <item>2400</item>
         <item>3500</item>
         <item>9000</item>
-    </integer-array>
+</integer-array>
 
     <!-- Array of output values for LCD backlight corresponding to the LUX values
          in the config_autoBrightnessLevels array.  This array should have size one greater
@@ -114,7 +114,7 @@
         <item>220</item>
         <item>235</item>
         <item>255</item>
-    </integer-array>
+</integer-array>
 
     <!-- Array of output values for button backlight corresponding to the LUX values
          in the config_autoBrightnessLevels array.  This array should have size one greater
@@ -134,7 +134,7 @@
         <item>0</item>
         <item>0</item>
         <item>0</item>
-    </integer-array>
+</integer-array>
 
     <!-- Array of output values for keyboard backlight corresponding to the LUX values
          in the config_autoBrightnessLevels array.  This array should have size one greater
@@ -147,7 +147,14 @@
         <item>0</item>
         <item>0</item>
         <item>0</item>
-    </integer-array>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+</integer-array>
 
     <!-- The duration (in milliseconds) that the radio will scan for a signal
          when there's no network connection. If the scan doesn't timeout, use zero -->
