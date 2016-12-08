@@ -101,6 +101,7 @@ BOARD_USES_QC_TIME_SERVICES := true
 
 # Recovery
 BOARD_NO_SECURE_DISCARD := true
+TARGET_RECOVERY_DENSITY := xhdpi
 TARGET_RECOVERY_FSTAB := device/lge/b1w-common/rootdir/etc/fstab.b1w
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_g2
