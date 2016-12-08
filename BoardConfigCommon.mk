@@ -112,6 +112,9 @@ TARGET_RELEASETOOLS_EXTENSIONS := device/lge/b1w-common/releasetools
 # RIL
 BOARD_RIL_CLASS += ../../../device/lge/b1w-common/ril
 
+# SDClang
+TARGET_USE_SDCLANG := true
+
 # SELinux policies
 include device/qcom/sepolicy/sepolicy.mk
 
