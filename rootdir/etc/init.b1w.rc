@@ -29,6 +29,9 @@ import init.b1w.power.rc
 import init.b1w.usb.rc
 
 on early-init
+    mount debugfs debugfs /sys/kernel/debug
+    chmod 0755 /sys/kernel/debug
+
     symlink /dev/diag_lge /dev/diag
 
     mkdir /sys 0771 system system
