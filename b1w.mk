@@ -72,8 +72,7 @@ PRODUCT_PACKAGES += \
     libaudio-resampler \
     libqcompostprocbundle \
     libqcomvisualizer \
-    libqcomvoiceprocessing \
-    libqcomvoiceprocessingdescriptors
+    libqcomvoiceprocessing
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio_effects.conf:system/vendor/etc/audio_effects.conf \
@@ -83,6 +82,9 @@ PRODUCT_COPY_FILES += \
 # Bluetooth
 PRODUCT_PACKAGES += \
     hwaddrs
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    qcom.bluetooth.soc=rome
 
 # BoringSSL compatability wrapper
 PRODUCT_PACKAGES += \
@@ -185,6 +187,7 @@ PRODUCT_PACKAGES += \
 # Qualcomm
 PRODUCT_PACKAGES += \
     libcnefeatureconfig \
+    librmnetctl \
     libxml2
 
 # Recovery
@@ -194,10 +197,6 @@ PRODUCT_PACKAGES += \
 ADDITIONAL_DEFAULT_PROPERTIES += \
      ro.adb.secure=0 \
      ro.debuggable=1
-
-# RIL
-PRODUCT_PACKAGES += \
-    libril_shim
 
 # Sensors
 PRODUCT_COPY_FILES += \
