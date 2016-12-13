@@ -36,7 +36,7 @@ vendor/firmware/BCM4335C0_003.001.009.0055.0262.hcd
 
 # Camera
 bin/mm-qcamera-daemon
-lib/hw/camera.msm8974.so
+lib/hw/camera.vendor.msm8974.so
 lib/libHDR.so
 lib/libmm-qcamera.so
 lib/libmmcamera_interface.so
@@ -259,7 +259,7 @@ bin/qmuxd
 bin/radish
 bin/rmt_storage
 etc/data/dsi_config.xml
-etc/data/netmgr_config.xm
+etc/data/netmgr_config.xml
 lib/libuicc.so
 lib/libvss_bsp_qcci.so
 lib/libvss_common_core.so
