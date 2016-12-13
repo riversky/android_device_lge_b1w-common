@@ -3,7 +3,7 @@
 /dev/btlock                                         u:object_r:btlock_file:s0
 
 # Hwaddrs
-/data/misc/bdaddr                                   u:object_r:hwaddrs_data_file:s0
+/data/misc/bluetooth/bdaddr                         u:object_r:hwaddrs_data_file:s0
 /system/bin/hwaddrs                                 u:object_r:hwaddrs_exec:s0
 
 # IR Blaster
