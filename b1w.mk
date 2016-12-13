@@ -188,7 +188,6 @@ PRODUCT_PACKAGES += \
 # Qualcomm
 PRODUCT_PACKAGES += \
     libcnefeatureconfig \
-    librmnetctl \
     libxml2
 
 # Recovery
@@ -198,6 +197,10 @@ PRODUCT_PACKAGES += \
 ADDITIONAL_DEFAULT_PROPERTIES += \
      ro.adb.secure=0 \
      ro.debuggable=1
+
+# RIL
+PRODUCT_PACKAGES += \
+    libril_shim
 
 # Sensors
 PRODUCT_COPY_FILES += \
