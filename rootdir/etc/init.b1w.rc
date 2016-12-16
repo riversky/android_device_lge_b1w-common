@@ -201,11 +201,6 @@ on boot
     chown bluetooth bluetooth /sys/devices/platform/msm_serial_hs.0/clock
     chmod 0660 /sys/devices/platform/msm_serial_hs.0/clock
 
-    # For NFC
-    chmod 0600 /dev/pn547
-    chown nfc nfc /dev/pn547
-    symlink /dev/pn547 /dev/pn544
-
     # vibrator
     chown system system /sys/class/timed_output/vibrator/amp
     chmod 0660 /sys/class/timed_output/vibrator/amp
