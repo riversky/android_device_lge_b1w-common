@@ -41,3 +41,6 @@
 /sys/devices/virtual/input/lge_touch(/.*)?          u:object_r:sysfs_touchpanel:s0
 /sys/devices/platform/tspdrv/nforce_timed           u:object_r:sysfs_vibeamp:s0
 
+# Tap2Wake
+/sys/devices/virtual/input/lge_touch/dt2w_enable    u:object_r:sysfs_tap2wake:s0
+
