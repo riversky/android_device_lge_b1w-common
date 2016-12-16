@@ -109,8 +109,8 @@ PRODUCT_PACKAGES += \
     QuickCircle
 
 # Gello
-PRODUCT_PACKAGES += \
-    Gello
+# PRODUCT_PACKAGES += \
+#    Gello
 
 # GPS
 PRODUCT_PACKAGES += \
